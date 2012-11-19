@@ -5,7 +5,7 @@ Note: Please make sure you have superuser privileges
 
 Usage:
 ----
-1. wget https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-install-script.sh
+1. wget https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-install-script.sh
 2. chmod 777 redis-install-script.sh
 3. ./redis-install-script.sh
 
