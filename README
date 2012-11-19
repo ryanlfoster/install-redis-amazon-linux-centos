@@ -1,5 +1,6 @@
-Script for installation of Redis 2.6.4 as a service on Amazon Elastic Beanstalk instances. It may probably fit other purposes as well. Just check out 'redis-install-script.sh' file ;)
 This is a modification of the original Saxenap's script, optimized for automatic deployment scripts.
+It performs an installation of Redis 2.6.4 as a service on Amazon Elastic Beanstalk instances. It may probably fit other purposes as well. Just check out 'redis-install-script.sh' file ;)
+
 Note: Please make sure you have superuser privileges
 
 Usage:
