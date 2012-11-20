@@ -45,8 +45,3 @@ chkconfig --level 345 redis-server on
 ####
 #service redis-server start
 ####
-# Download and install wkhtmltopdf
-####
-wget -q http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9-static-amd64.tar.bz2
-tar -jxvf ./wkhtmltopdf-0.9.9-static-amd64.tar.bz2
-mv ./wkhtmltopdf-amd64 /usr/local/bin/wkhtmltopdf
