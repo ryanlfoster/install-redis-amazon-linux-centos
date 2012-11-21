@@ -11,34 +11,35 @@
 ###############################################
 # Set up SO:
 ####
+# yum -q -y update
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
-yum -q -y install gcc gcc-c++ make 
+# yum -q -y install gcc gcc-c++ make 
 ####
 # Download and install Redis:
 ####
-wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
-tar xzf redis-2.6.4.tar.gz
-rm -f redis-2.6.4.tar.gz
-cd redis-2.6.4
-make -s
-make -s install
+# wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
+# tar xzf redis-2.6.4.tar.gz
+# rm -f redis-2.6.4.tar.gz
+# cd redis-2.6.4
+# make -s
+# make -s install
 ####
 # Set up Redis
 ####
-rm -rf /etc/redis /var/lib/redis
-mkdir /etc/redis /var/lib/redis
-cp src/redis-server src/redis-cli /usr/local/bin
-cp redis.conf /etc/redis
-sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
+# rm -rf /etc/redis /var/lib/redis
+# mkdir /etc/redis /var/lib/redis
+# cp src/redis-server src/redis-cli /usr/local/bin
+# cp redis.conf /etc/redis
+# sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
 ####
 # Redis correctly installed.
 # Download script for running Redis
 ####
-wget -q https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-server
-mv redis-server /etc/init.d
-chmod 755 /etc/init.d/redis-server
-chkconfig --add redis-server
-chkconfig --level 345 redis-server on
+# wget -q https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-server
+# mv redis-server /etc/init.d
+# chmod 755 /etc/init.d/redis-server
+# chkconfig --add redis-server
+# chkconfig --level 345 redis-server on
 ####
 # To start Redis just uncomment this line
 ####
