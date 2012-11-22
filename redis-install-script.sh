@@ -21,15 +21,15 @@ wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
 tar xzf redis-2.6.4.tar.gz
 rm -f redis-2.6.4.tar.gz
 cd redis-2.6.4
-# make -s
-# make -s install
+make -s
+make -s install
 ####
 # Set up Redis
 ####
-# rm -rf /etc/redis /var/lib/redis
-# mkdir /etc/redis /var/lib/redis
-# cp src/redis-server src/redis-cli /usr/local/bin
-# cp redis.conf /etc/redis
+rm -rf /etc/redis /var/lib/redis
+mkdir /etc/redis /var/lib/redis
+cp src/redis-server src/redis-cli /usr/local/bin
+cp redis.conf /etc/redis
 # sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
 ####
 # Redis correctly installed.
