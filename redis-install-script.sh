@@ -13,14 +13,14 @@
 ####
 # yum -q -y update
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
-# yum -q -y install gcc gcc-c++ make 
+yum -q -y install gcc gcc-c++ make 
 ####
 # Download and install Redis:
 ####
-# wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
-# tar xzf redis-2.6.4.tar.gz
-# rm -f redis-2.6.4.tar.gz
-# cd redis-2.6.4
+wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
+tar xzf redis-2.6.4.tar.gz
+rm -f redis-2.6.4.tar.gz
+cd redis-2.6.4
 # make -s
 # make -s install
 ####
