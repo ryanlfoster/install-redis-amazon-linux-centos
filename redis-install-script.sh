@@ -35,6 +35,7 @@ sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1
 # Redis correctly installed.
 # Download script for running Redis
 ####
+cd ..
 wget -q https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-server
 mv redis-server /etc/init.d
 chmod 755 /etc/init.d/redis-server
