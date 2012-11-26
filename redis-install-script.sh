@@ -11,7 +11,7 @@
 ###############################################
 # Set up SO:
 ####
-yum -q -y update
+# yum -q -y update
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 yum -q -y install gcc gcc-c++ make 
 ####
