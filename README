@@ -1,11 +1,12 @@
-This is a modification of the original Saxenap's script, optimized for automatic deployment scripts.
-It performs an installation of Redis 2.6.4 as a service on Amazon Elastic Beanstalk instances. It may probably fit other purposes as well. Just check out 'redis-install-script.sh' file ;)
+This is a modification of JorgeRdg's version of the original Saxenap's script, optimized for automatic deployment scripts.
+It performs an installation of Redis as a service on Amazon Elastic Beanstalk instances. It may probably fit other purposes as well. Just check out 'redis-install-script.sh' file ;)
+This version is updated to install the current stable release of redis from redis.io ( instead of 2.6.4 from googlecode ).
 
 Note: Please make sure you have superuser privileges
 
 Usage:
 ----
-1. wget https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-install-script.sh
+1. wget https://raw.github.com/KeithP/install-redis-amazon-linux-centos/master/redis-install-script.sh
 2. chmod 777 redis-install-script.sh
 3. ./redis-install-script.sh
 
