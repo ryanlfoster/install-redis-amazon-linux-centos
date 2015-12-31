@@ -4,22 +4,22 @@
 # Thanks to https://raw.github.com/gist/2776679/b4f5f5ff85bddfa9e07664de4e8ccf0e115e7b83/install-redis.sh
 # Uses redis-server init script from https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-server
 ###############################################
-# To use: 
-## wget https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-install-script.sh
+# To use:
+## wget https://raw.github.com/KeithP/install-redis-amazon-linux-centos/master/redis-install-script.sh
 ## chmod 777 redis-install-script.sh
 ## ./redis-install-script.sh
 ###############################################
 # Set up SO:
 ####
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
-yum -q -y install gcc gcc-c++ make 
+yum -q -y install gcc gcc-c++ make
 ####
 # Download and install Redis:
 ####
-wget -q http://redis.googlecode.com/files/redis-2.6.4.tar.gz
-tar xzf redis-2.6.4.tar.gz
-rm -f redis-2.6.4.tar.gz
-cd redis-2.6.4
+wget -q http://download.redis.io/releases/redis-stable.tar.gz
+tar xzf redis-stable.tar.gz
+rm -f redis-stable.tar.gz
+cd redis-stable
 make -s
 make -s install
 ####
@@ -35,7 +35,7 @@ sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1
 # Download script for running Redis
 ####
 cd ..
-wget -q https://raw.github.com/jorgerc/install-redis-amazon-linux-centos/master/redis-server
+wget -q https://raw.github.com/KeithP/install-redis-amazon-linux-centos/master/redis-server
 mv redis-server /etc/init.d
 chmod 755 /etc/init.d/redis-server
 chkconfig --add redis-server
