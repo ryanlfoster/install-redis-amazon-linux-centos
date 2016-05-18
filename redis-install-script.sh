@@ -5,7 +5,7 @@
 # Uses redis-server init script from https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-server
 ###############################################
 # To use:
-## wget https://raw.github.com/KeithP/install-redis-amazon-linux-centos/master/redis-install-script.sh
+## wget https://raw.github.com/ryanlfoster/install-redis-amazon-linux-centos/master/redis-install-script.sh
 ## chmod 777 redis-install-script.sh
 ## ./redis-install-script.sh
 ###############################################
@@ -35,13 +35,13 @@ sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1
 # Download script for running Redis
 ####
 cd ..
-wget -q https://raw.github.com/KeithP/install-redis-amazon-linux-centos/master/redis-server
+wget -q https://raw.github.com/ryanlfoster/install-redis-amazon-linux-centos/master/redis-server
 mv redis-server /etc/init.d
 chmod 755 /etc/init.d/redis-server
 chkconfig --add redis-server
 chkconfig --level 345 redis-server on
 ####
-# To start Redis just uncomment this line
+# Start Redis
 ####
-#service redis-server start
+service redis-server start
 ####
